@@ -1,0 +1,34 @@
+$colorTop: rgb(255, 238, 0);
+$colorMid: rgb(255, 187, 0);
+$colorBot: rgb(255, 136, 0);
+$colorHover: rgb(225, 180, 255);
+
+@mixin param {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@mixin font {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.div1 {
+    @include param();
+    @include font();
+    background-color: $colorTop;
+    &:hover {
+        background-color: $colorHover;
+    }
+}
+
+.div2 {
+    @extend .div1;
+    background-color: $colorMid;
+}
+
+.div3 {
+    @extend .div1;
+    background-color: $colorBot;
+}
