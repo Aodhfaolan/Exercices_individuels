@@ -9,7 +9,6 @@ function player1() {
 }
 
 
-
 function didIWin(answer, numberToGuess) {
     if (answer < numberToGuess) {
         alert("PLUS GRAND")
@@ -26,12 +25,18 @@ function didIWin(answer, numberToGuess) {
 
 
 function gamePlay() {
-    let numberPlr1 = player1();
-    if (numberPlr1 >= minRange && numberPlr1 >= maxRange) {
-        didIWin(numberPlr1, numberToGuess);
-    } else {
-        alert(`Veuillez rentrer un nombre entre ${minRange} et ${maxRange}`);
+    let hasWon = false;
+    while (!hasWon) {
+        let numberPlr1 = player1();
+        if (numberPlr1 >= minRange && numberPlr1 <= maxRange) {
+            hasWon = didIWin(numberPlr1, numberToGuess);
+        } else {
+            alert(`Veuillez rentrer spécifiquement un nombre entre ${minRange} et ${maxRange}`);
+        }
     }
 }
 
 gamePlay()
+
+
+//NE S ARRETE PAS QUAND TRUE BORDEL DE MERDE JEN AI MARRE??????

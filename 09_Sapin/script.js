@@ -13,7 +13,7 @@ function afficherRectangle(hauteur, largeur) {
     //    appeler printEtoile
     etage = hauteur
     // for each hauteur
-    etage.forEach(printEtoile(largeur));
+    //etage.forEach(printEtoile(largeur));
     // printEtoile(largeur)
 
 
